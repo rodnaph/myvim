@@ -26,3 +26,5 @@ hi CursorLine cterm=NONE ctermbg=blue ctermfg=white
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 
+alias c=clear
+
