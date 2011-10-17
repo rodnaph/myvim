@@ -8,7 +8,7 @@ set number
 set nowrap
 set cindent
 set nobackup
-
+set autoindent
 set paste
 
 syntax on
@@ -28,5 +28,4 @@ set cursorline
 hi CursorLine cterm=NONE ctermbg=blue ctermfg=white
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
-
 
