@@ -29,3 +29,5 @@ hi CursorLine cterm=NONE ctermbg=blue ctermfg=white
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
+
