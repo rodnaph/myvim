@@ -31,3 +31,5 @@ autocmd WinLeave * setlocal nocursorline
 
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
+au BufRead,BufNewFile *.twig set syntax=jinja
+
