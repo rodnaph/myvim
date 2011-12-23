@@ -34,12 +34,14 @@ nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 " enable twig hightling (TODO)
 au BufRead,BufNewFile *.twig set syntax=jinja
 
-" debugging
-map 2 <F2>
-map 3 <F3>
-map 5 <F5>
-map 6 <F12>
-
 " phpunit shortcut
 map :ut :PhpUnitFile
+
+" phing helpers
+command PhingClearCache execute "!phing clearcache"
+command PhingVendors execute "!phing vendors"
+
+map :pc :PhingClearCache<CR>
+map :pv :PhingVendors<CR>
+
 
