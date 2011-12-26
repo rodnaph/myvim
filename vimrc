@@ -44,4 +44,8 @@ command PhingVendors execute "!phing vendors"
 map :pc :PhingClearCache<CR>
 map :pv :PhingVendors<CR>
 
+" lein helpers
+command LeinTest execute "!lein test"
+
+map :lt :LeinTest<CR>
 
