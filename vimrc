@@ -37,15 +37,19 @@ au BufRead,BufNewFile *.twig set syntax=jinja
 " phpunit shortcut
 map :ut :PhpUnitFile
 
-" phing helpers
+" phing
 command PhingClearCache execute "!phing clearcache"
 command PhingVendors execute "!phing vendors"
 
 map :pc :PhingClearCache<CR>
 map :pv :PhingVendors<CR>
 
-" lein helpers
+" lein
 command LeinTest execute "!lein test"
 
 map :lt :LeinTest<CR>
+
+" slime
+" pass while file to slime
+:map <C-c>a ggvG<C-c><C-c>
 
