@@ -35,7 +35,7 @@ nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 au BufRead,BufNewFile *.twig set syntax=jinja
 
 " phpunit shortcut
-map :pu :PhpUnitFile
+map :pu :PhpUnitFile<CR><CR>
 
 " phing
 command PhingClearCache execute "!phing clearcache"
