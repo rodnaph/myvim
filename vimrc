@@ -53,3 +53,6 @@ map :lt :LeinTest<CR>
 " pass while file to slime
 :map <C-c>a ggvG<C-c><C-c>
 
+" ctrlp
+:map <c-o> :CtrlP<CR>
+
