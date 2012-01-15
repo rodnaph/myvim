@@ -52,4 +52,9 @@ map :lt :LeinTest<CR>
 " slime
 " pass while file to slime
 :map <C-c>a ggvG<C-c><C-c>
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$',
+  \ 'file': '\.exe$\|\.so$\|\.dll|\.swp|\.DS_Store$',
+  \ 'link': 'bad_symbolic_link',
+  \ }
 
