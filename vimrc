@@ -54,7 +54,7 @@ map :lt :LeinTest<CR>
 :map <C-c>a ggvG<C-c><C-c>
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.hg$\|\.svn$',
-  \ 'file': '\.exe$\|\.so$\|\.dll|\.swp|\.DS_Store$',
+  \ 'file': '\.exe$\|\.so$\|\.dll$\|\.swp$\|\.DS_Store$\|\.jar$',
   \ 'link': 'bad_symbolic_link',
   \ }
 
