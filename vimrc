@@ -31,9 +31,6 @@ autocmd WinLeave * setlocal nocursorline
 " rename word under cursor
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
-" enable twig hightling (TODO)
-au BufRead,BufNewFile *.twig set syntax=jinja
-
 " phpunit shortcut
 map :pu :PhpUnitFile<CR><CR>
 
@@ -52,6 +49,11 @@ map :lt :LeinTest<CR>
 " slime
 " pass while file to slime
 :map <C-c>a ggvG<C-c><C-c>
+
+" ctrlp
+" disable jump to buffer
+let g:ctrlp_jump_to_buffer = 0
+" custom filetype ignores
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.hg$\|\.svn$',
   \ 'file': '\.exe$\|\.so$\|\.dll$\|\.swp$\|\.DS_Store$\|\.jar$',
