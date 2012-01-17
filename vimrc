@@ -59,4 +59,6 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\.exe$\|\.so$\|\.dll$\|\.swp$\|\.DS_Store$\|\.jar$',
   \ 'link': 'bad_symbolic_link',
   \ }
+" keep project directory as working dir
+let g:ctrlp_working_path_mode = 0
 
