@@ -55,7 +55,7 @@ map :lt :LeinTest<CR>
 let g:ctrlp_jump_to_buffer = 0
 " custom filetype ignores
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|build$',
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|build$\|classes$',
   \ 'file': '\.exe$\|\.so$\|\.dll$\|\.swp$\|\.DS_Store$\|\.jar$',
   \ 'link': 'bad_symbolic_link',
   \ }
