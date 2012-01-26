@@ -62,3 +62,7 @@ let g:ctrlp_custom_ignore = {
 " keep project directory as working dir
 let g:ctrlp_working_path_mode = 0
 
+" YankRing
+let g:yankring_replace_n_pkey = '<C-Y>'
+:map :yr :YRShow<CR>
+
