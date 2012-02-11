@@ -66,3 +66,6 @@ let g:ctrlp_working_path_mode = 0
 let g:yankring_replace_n_pkey = '<C-Y>'
 :map :yr :YRShow<CR>
 
+" javascript/html indenting
+so $HOME/.vim/indent/javascript.vim
+
