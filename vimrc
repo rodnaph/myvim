@@ -21,6 +21,9 @@ set backspace=2
 set hlsearch
 set incsearch
 
+" ctrl-k to clear search highlighting
+noremap <C-K> :nohl<CR>
+
 " try auto-indenting
 set cindent
 set autoindent
