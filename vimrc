@@ -1,12 +1,37 @@
 
+" set indent to 4 spaces
 set tabstop=4
 set shiftwidth=4
 set expandtab
+
+" show line numbers
 set number
+
+" disabling line wrapping
 set nowrap
+
+" search ignores case
+set ignorecase
+set smartcase
+
+" allow backspacing over indent
+set backspace=2
+
+" enable incremental search
+set hlsearch
+set incsearch
+
+" ctrl-k to clear search highlighting
+noremap <C-K> :nohl<CR>
+
+" try auto-indenting
 set cindent
-set nobackup
 set autoindent
+
+" no back files
+set nobackup
+set nowritebackup
+set noswapfile
 
 " status line
 set laststatus=2
