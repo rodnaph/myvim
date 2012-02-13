@@ -7,7 +7,6 @@ set nowrap
 set cindent
 set nobackup
 set autoindent
-set paste
 
 " status line
 set laststatus=2
@@ -68,4 +67,7 @@ let g:yankring_replace_n_pkey = '<C-Y>'
 
 " javascript/html indenting
 so $HOME/.vim/indent/javascript.vim
+
+" always use paste mode
+set paste
 
