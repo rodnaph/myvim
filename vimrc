@@ -96,3 +96,6 @@ so $HOME/.vim/indent/javascript.vim
 " always use paste mode
 set paste
 
+" shortcut to close all buffers
+:noremap :bda :bufdo bdelete<CR>
+
