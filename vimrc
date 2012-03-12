@@ -1,4 +1,16 @@
 
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" vundles (https://github.com/gmarik/vundle)
+Bundle 'gmarik/vundle'
+Bundle 'vim-scripts/slimv.vim'
+Bundle 'scrooloose/syntastic'
+Bundle 'kien/ctrlp.vim'
+Bundle 'chrismetcalf/vim-yankring'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'vim-scripts/JavaScript-Indent'
+
 " set indent to 4 spaces
 set tabstop=4
 set shiftwidth=4
@@ -89,9 +101,6 @@ let g:ctrlp_working_path_mode = 0
 " YankRing
 let g:yankring_replace_n_pkey = '<C-Y>'
 :map :yr :YRShow<CR>
-
-" javascript/html indenting
-so $HOME/.vim/indent/javascript.vim
 
 " always use paste mode
 set paste
