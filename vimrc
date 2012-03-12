@@ -108,3 +108,10 @@ set paste
 " shortcut to close all buffers
 :noremap :bda :bufdo bdelete<CR>
 
+" symfony shortcuts from Resources
+:noremap :sbe :e ../Entity<CR>
+:noremap :sbc :e ../Controller<CR>
+
+" svn blame on file
+:noremap :sb ggdG:r!svn blame %<CR>
+
