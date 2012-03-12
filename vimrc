@@ -11,6 +11,7 @@ Bundle 'chrismetcalf/vim-yankring'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'vim-scripts/JavaScript-Indent'
 Bundle 'vim-scripts/VimClojure'
+Bundle 'rodnaph/vim-phpunit'
 
 " set indent to 4 spaces
 set tabstop=4
