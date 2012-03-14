@@ -100,6 +100,9 @@ let g:ctrlp_custom_ignore = {
 " keep project directory as working dir
 let g:ctrlp_working_path_mode = 0
 
+" clear ctrlp cache
+:noremap :ccc :ClearAllCtrlPCaches<CR>
+
 " YankRing
 let g:yankring_replace_n_pkey = '<C-Y>'
 :map :yr :YRShow<CR>
@@ -116,4 +119,7 @@ set paste
 
 " svn blame on file
 :noremap :sb ggdG:r!svn blame %<CR>
+
+" disable phpcs
+let g:syntastic_phpcs_disable = 1
 
