@@ -123,3 +123,6 @@ set paste
 " disable phpcs
 let g:syntastic_phpcs_disable = 1
 
+" syntax highlighting for clojurescript
+au BufRead,BufNewFile *.cljs set syntax=clojure
+
