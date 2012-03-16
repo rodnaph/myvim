@@ -1,17 +1,29 @@
 
+syntax on
+filetype off
+
+" slimv config
+let g:slimv_swank_clojure = '! xterm -e lein swank &'
+let g:lisp_rainbow = 1
+let g:slimv_repl_syntax = 1
+
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " vundles (https://github.com/gmarik/vundle)
 Bundle 'gmarik/vundle'
-Bundle 'vim-scripts/slimv.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'kien/ctrlp.vim'
 Bundle 'chrismetcalf/vim-yankring'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'vim-scripts/JavaScript-Indent'
-Bundle 'vim-scripts/VimClojure'
 Bundle 'rodnaph/vim-phpunit'
+
+Bundle 'jpalardy/vim-slime'
+Bundle 'vim-scripts/VimClojure'
+"Bundle 'vim-scripts/slimv.vim'
+
+filetype plugin indent on
 
 " set indent to 4 spaces
 set tabstop=4
