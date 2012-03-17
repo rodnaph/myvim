@@ -18,6 +18,7 @@ Bundle 'chrismetcalf/vim-yankring'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'vim-scripts/JavaScript-Indent'
 Bundle 'rodnaph/vim-phpunit'
+Bundle 'tpope/vim-fugitive'
 
 Bundle 'jpalardy/vim-slime'
 Bundle 'vim-scripts/VimClojure'
