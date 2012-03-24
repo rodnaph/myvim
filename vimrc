@@ -146,5 +146,8 @@ let g:syntastic_phpcs_disable = 1
 au BufRead,BufNewFile *.cljs set syntax=clojure
 au BufRead,BufNewFile *.cljp set syntax=clojure
 
+" shortcut to change tabs
+:noremap <C-]> :tabn<CR>
+
 colorscheme molokai
 
