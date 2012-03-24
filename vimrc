@@ -21,6 +21,7 @@ Bundle 'chrismetcalf/vim-yankring'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'vim-scripts/JavaScript-Indent'
 Bundle 'tpope/vim-fugitive'
+Bundle 'rodnaph/vim-phpunit'
 
 Bundle 'rodnaph/vim-phpunit'
 Bundle 'rodnaph/vim-color-schemes'
