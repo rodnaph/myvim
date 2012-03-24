@@ -147,7 +147,8 @@ au BufRead,BufNewFile *.cljs set syntax=clojure
 au BufRead,BufNewFile *.cljp set syntax=clojure
 
 " shortcut to change tabs
-:noremap <C-]> :tabn<CR>
+:noremap <C-h> :tabp<CR>
+:noremap <C-l> :tabn<CR>
 
 colorscheme molokai
 
