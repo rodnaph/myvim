@@ -2,6 +2,9 @@
 syntax on
 filetype off
 
+" enable 256 colors
+set t_Co=256
+
 " slimv config
 let g:slimv_swank_clojure = '! xterm -e lein swank &'
 let g:lisp_rainbow = 1
@@ -17,8 +20,10 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'chrismetcalf/vim-yankring'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'vim-scripts/JavaScript-Indent'
-Bundle 'rodnaph/vim-phpunit'
 Bundle 'tpope/vim-fugitive'
+
+Bundle 'rodnaph/vim-phpunit'
+Bundle 'rodnaph/vim-color-schemes'
 
 Bundle 'jpalardy/vim-slime'
 Bundle 'vim-scripts/VimClojure'
@@ -138,4 +143,7 @@ let g:syntastic_phpcs_disable = 1
 
 " syntax highlighting for clojurescript
 au BufRead,BufNewFile *.cljs set syntax=clojure
+au BufRead,BufNewFile *.cljp set syntax=clojure
+
+colorscheme molokai
 
