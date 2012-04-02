@@ -18,10 +18,12 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/syntastic'
 Bundle 'kien/ctrlp.vim'
 Bundle 'chrismetcalf/vim-yankring'
-Bundle 'kchmck/vim-coffee-script'
+"Bundle 'kchmck/vim-coffee-script'
 Bundle 'vim-scripts/JavaScript-Indent'
-Bundle 'tpope/vim-fugitive'
-Bundle 'beyondwords/vim-twig'
+"Bundle 'tpope/vim-fugitive'
+"Bundle 'beyondwords/vim-twig'
+"Bundle 'kana/vim-smartinput'
+Bundle 'altercation/vim-colors-solarized'
 
 Bundle 'rodnaph/vim-phpunit'
 Bundle 'rodnaph/vim-color-schemes'
@@ -110,14 +112,19 @@ map :lt :LeinTest<CR>
 " ctrlp
 " disable jump to buffer
 let g:ctrlp_jump_to_buffer = 0
+
 " custom filetype ignores
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.hg$\|\.svn$\|build$\|classes$',
   \ 'file': '\.exe$\|\.so$\|\.dll$\|\.swp$\|\.DS_Store$\|\.jar$',
   \ 'link': 'bad_symbolic_link',
   \ }
+
 " keep project directory as working dir
 let g:ctrlp_working_path_mode = 0
+
+" use filename matching by default
+let g:ctrlp_by_filename = 1
 
 " clear ctrlp cache
 :noremap :ccc :ClearAllCtrlPCaches<CR>
@@ -150,5 +157,7 @@ au BufRead,BufNewFile *.cljp set syntax=clojure
 :noremap <C-h> :tabp<CR>
 :noremap <C-l> :tabn<CR>
 
-colorscheme molokai
+" set colorscheme
+set background=dark
+colorscheme solarized
 
