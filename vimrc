@@ -153,9 +153,15 @@ let g:syntastic_phpcs_disable = 1
 au BufRead,BufNewFile *.cljs set syntax=clojure
 au BufRead,BufNewFile *.cljp set syntax=clojure
 
+" syntax highlighting for xcss
+au BufRead,BufNewFile *.xcss set syntax=css
+
 " shortcut to change tabs
 :noremap <C-h> :tabp<CR>
 :noremap <C-l> :tabn<CR>
+
+" shortcut to run coding standards
+:noremap :cs :!phpcs --standard=BoxUK %<CR>
 
 " set colorscheme
 set background=dark
