@@ -1,4 +1,3 @@
-
 syntax on
 filetype off
 
@@ -167,3 +166,5 @@ au BufRead,BufNewFile *.xcss set syntax=css
 set background=dark
 colorscheme solarized
 
+" enable copy-on-select in macvim
+set go+=a
