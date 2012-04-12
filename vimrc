@@ -179,4 +179,3 @@ endif
 
 " set 2 space indent for scss files
 autocmd Filetype scss setlocal ts=2 sts=2 sw=2
-
