@@ -168,3 +168,12 @@ colorscheme solarized
 
 " enable copy-on-select in macvim
 set go+=a
+
+" set macvim font
+set gfn=Monaco:h12
+
+" disable macvim toolbar
+if has("gui_running")
+    set guioptions=egmrt
+endif
+
