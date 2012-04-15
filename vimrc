@@ -153,7 +153,7 @@ au BufRead,BufNewFile *.cljs set syntax=clojure
 au BufRead,BufNewFile *.cljp set syntax=clojure
 
 " syntax highlighting for xcss
-au BufRead,BufNewFile *.xcss set syntax=css
+au BufRead,BufNewFile *.xcss set syntax=scss
 
 " shortcut to change tabs
 :noremap <C-h> :tabp<CR>
@@ -176,4 +176,7 @@ set gfn=Monaco:h12
 if has("gui_running")
     set guioptions=egmrt
 endif
+
+" set 2 space indent for scss files
+autocmd Filetype scss setlocal ts=2 sts=2 sw=2
 
