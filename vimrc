@@ -89,21 +89,6 @@ autocmd WinLeave * setlocal nocursorline
 " rename word under cursor
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
-" phpunit shortcut
-map :pu :PhpUnitFile<CR><CR>
-
-" phing
-command PhingClearCache execute "!phing clearcache"
-command PhingVendors execute "!phing vendors"
-
-map :pc :PhingClearCache<CR>
-map :pv :PhingVendors<CR>
-
-" lein
-command LeinTest execute "!lein test"
-
-map :lt :LeinTest<CR>
-
 " slime
 " pass while file to slime
 :map <C-c>a ggvG<C-c><C-c>
@@ -114,7 +99,7 @@ let g:ctrlp_jump_to_buffer = 0
 
 " custom filetype ignores
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|build$\|classes$\|\.lein.*$',
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|build$\|classes$\|vendor$\|\.lein.*$',
   \ 'file': '\.swf$\|\.flv$\|\.gif$\|\.png$\|\.jpg$\|\.exe$\|\.so$\|\.dll$\|\.swp$\|\.DS_Store$\|\.jar$',
   \ 'link': 'bad_symbolic_link',
   \ }
