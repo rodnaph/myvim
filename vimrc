@@ -180,3 +180,6 @@ endif
 " set 2 space indent for scss files
 autocmd Filetype scss setlocal ts=2 sts=2 sw=2
 
+" syntax highlighting for racket files
+au BufRead,BufNewFile *.rkt set syntax=scheme
+
