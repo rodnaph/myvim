@@ -4,6 +4,9 @@ filetype off
 " enable 256 colors
 set t_Co=256
 
+" ensure unix line endings
+set ff=unix
+
 " slimv config
 let g:slimv_swank_clojure = '! xterm -e lein swank &'
 let g:lisp_rainbow = 1
