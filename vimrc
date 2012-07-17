@@ -1,3 +1,4 @@
+
 syntax on
 filetype off
 
@@ -11,6 +12,12 @@ set ff=unix
 let g:slimv_swank_clojure = '! xterm -e lein swank &'
 let g:lisp_rainbow = 1
 let g:slimv_repl_syntax = 1
+
+" syntastic
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_jump=1
+let g:syntastic_auto_loc_list=1
+let g:loaded_html_syntax_checker=1 " disables html checker
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -77,12 +84,6 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-" syntax highlighting
-syntax on
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_jump=1
-let g:syntastic_auto_loc_list=1
-
 " show filename for windows
 set cursorline
 hi CursorLine cterm=NONE ctermbg=blue ctermfg=white
@@ -137,6 +138,7 @@ set paste
 let g:syntastic_phpcs_disable = 1
 
 " syntax highlighting for clojurescript
+au BufRead,BufNewFile *.cljs set filetype=clojure
 au BufRead,BufNewFile *.cljs set syntax=clojure
 au BufRead,BufNewFile *.cljp set syntax=clojure
 
