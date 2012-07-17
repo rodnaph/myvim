@@ -176,4 +176,5 @@ au BufRead,BufNewFile *.rkt set syntax=scheme
 
 " 2 space indentation for racket files
 autocmd Filetype racket setlocal ts=2 sts=2 sw=2
+autocmd Filetype clojure setlocal ts=2 sts=2 sw=2
 
