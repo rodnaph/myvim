@@ -180,3 +180,6 @@ au BufRead,BufNewFile *.rkt set syntax=scheme
 autocmd Filetype racket setlocal ts=2 sts=2 sw=2
 autocmd Filetype clojure setlocal ts=2 sts=2 sw=2
 
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+
