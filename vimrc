@@ -5,6 +5,9 @@ filetype off
 " enable 256 colors
 set t_Co=256
 
+" ensure unix line endings
+set ff=unix
+
 " slimv config
 let g:slimv_swank_clojure = '! xterm -e lein swank &'
 let g:lisp_rainbow = 1
@@ -175,4 +178,8 @@ au BufRead,BufNewFile *.rkt set syntax=scheme
 
 " 2 space indentation for racket files
 autocmd Filetype racket setlocal ts=2 sts=2 sw=2
+autocmd Filetype clojure setlocal ts=2 sts=2 sw=2
+
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
 
