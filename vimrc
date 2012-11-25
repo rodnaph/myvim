@@ -37,6 +37,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'rodnaph/vim-phpunit'
 Bundle 'rodnaph/vim-color-schemes'
 
+Bundle 'vim-scripts/paredit.vim'
 Bundle 'jpalardy/vim-slime'
 Bundle 'vim-scripts/VimClojure'
 "Bundle 'vim-scripts/slimv.vim'
@@ -154,7 +155,9 @@ au BufRead,BufNewFile *.xcss set syntax=scss
 
 " set colorscheme
 set background=dark
-colorscheme solarized
+"colorscheme solarized
+"colorscheme molokai
+colorscheme vanzan_color
 
 " enable copy-on-select in macvim
 set go+=a
@@ -180,6 +183,22 @@ au BufRead,BufNewFile *.rkt set syntax=scheme
 autocmd Filetype racket setlocal ts=2 sts=2 sw=2
 autocmd Filetype clojure setlocal ts=2 sts=2 sw=2
 
+" 2 space indent for haskell
+autocmd Filetype haskell setlocal ts=2 sts=2 sw=2
+
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
+
+" reload vimrc when edited
+autocmd! BufWritePost vimrc source ~/.vimrc
+
+" easy split navigation
+noremap <C-h>  <C-w>h
+noremap <C-j>  <C-w>j
+noremap <C-k>  <C-w>k
+noremap <C-l>  <C-w>l
+
+" Reselect visual block after indent/outdent
+vnoremap < <gv
+vnoremap > >gv
 
