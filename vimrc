@@ -67,7 +67,7 @@ set hlsearch
 set incsearch
 
 " ctrl-k to clear search highlighting
-noremap <C-K> :nohl<CR>
+noremap <C-\> :nohl<CR>
 
 " try auto-indenting
 set cindent
