@@ -202,3 +202,7 @@ noremap <C-l>  <C-w>l
 vnoremap < <gv
 vnoremap > >gv
 
+" close all splits but current
+nmap <C-o> :only<CR>
+
+
