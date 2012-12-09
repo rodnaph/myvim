@@ -187,7 +187,7 @@ autocmd Filetype clojure setlocal ts=2 sts=2 sw=2
 autocmd Filetype haskell setlocal ts=2 sts=2 sw=2
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+match OverLength /\%121v.\+/
 
 " reload vimrc when edited
 autocmd! BufWritePost vimrc source ~/.vimrc
@@ -205,4 +205,6 @@ vnoremap > >gv
 " close all splits but current
 nmap <C-o> :only<CR>
 
+" In normal mode, space to center on current line
+nmap <space> zz
 
