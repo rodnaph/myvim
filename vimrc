@@ -203,7 +203,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 " close all splits but current
-nmap <C-o> :only<CR>
+nmap <C-u> :only<CR>
 
 " In normal mode, space to center on current line
 nmap <space> zz
