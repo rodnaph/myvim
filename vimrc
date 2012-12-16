@@ -208,3 +208,7 @@ nmap <C-u> :only<CR>
 " In normal mode, space to center on current line
 nmap <space> zz
 
+" use H and L for moving sexps up/down in paredit
+nmap <S-h> ,<
+nmap <S-l> ,>
+
