@@ -1,17 +1,5 @@
 
-syntax on
-filetype off
-
-" enable 256 colors
-set t_Co=256
-
-" ensure unix line endings
-set ff=unix
-
-" slimv config
-let g:slimv_swank_clojure = '! xterm -e lein swank &'
-let g:lisp_rainbow = 1
-let g:slimv_repl_syntax = 1
+" Plugins {{{
 
 " syntastic
 let g:syntastic_enable_signs=1
@@ -19,30 +7,107 @@ let g:syntastic_auto_jump=1
 let g:syntastic_auto_loc_list=1
 let g:loaded_html_syntax_checker=1 " disables html checker
 
+" init Vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" vundles (https://github.com/gmarik/vundle)
+" Vundles (https://github.com/gmarik/vundle)
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/syntastic'
 Bundle 'kien/ctrlp.vim'
-Bundle 'chrismetcalf/vim-yankring'
-"Bundle 'kchmck/vim-coffee-script'
 Bundle 'vim-scripts/JavaScript-Indent'
-"Bundle 'tpope/vim-fugitive'
-"Bundle 'beyondwords/vim-twig'
-"Bundle 'kana/vim-smartinput'
 Bundle 'altercation/vim-colors-solarized'
-
 Bundle 'rodnaph/vim-phpunit'
 Bundle 'rodnaph/vim-color-schemes'
-
 Bundle 'vim-scripts/paredit.vim'
 Bundle 'jpalardy/vim-slime'
 Bundle 'vim-scripts/VimClojure'
-"Bundle 'vim-scripts/slimv.vim'
+
+" disable jump to buffer
+let g:ctrlp_jump_to_buffer = 0
+
+" custom filetype ignores
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|build$\|classes$\|node_modules$\|vendor$\|\.lein.*$',
+  \ 'file': '\.swf$\|\.flv$\|\.gif$\|\.png$\|\.jpg$\|\.exe$\|\.so$\|\.dll$\|\.swp$\|\.DS_Store$\|\.jar$',
+  \ 'link': 'bad_symbolic_link',
+  \ }
+
+" keep project directory as working dir
+let g:ctrlp_working_path_mode = 0
+
+" use filename matching by default
+let g:ctrlp_by_filename = 1
+
+" clear ctrlp cache
+nnoremap :ccc :ClearAllCtrlPCaches<CR>
+
+" disable phpcs
+let g:syntastic_phpcs_disable = 1
+
+" }}}
+
+" Core {{{
+
+syntax on
 
 filetype plugin indent on
+
+" enable 256 colors
+set t_Co=256
+
+" ensure unix line endings
+set ff=unix
+
+" always use paste mode
+set paste
+
+" enable copy-on-select in macvim
+set go+=a
+
+" status line
+set laststatus=2
+set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+" show filename for windows
+set cursorline
+hi CursorLine cterm=NONE ctermbg=blue ctermfg=white
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
+
+" }}}
+
+" Visual {{{
+
+" set colorscheme
+set background=dark
+colorscheme vanzan_color
+
+" set macvim font
+set gfn=Monaco:h12
+
+" disable macvim toolbar
+if has("gui_running")
+    set guioptions=egmrt
+endif
+
+" no back files
+set nobackup
+set nowritebackup
+set noswapfile
+
+" }}}
+
+" Editing {{{
+
+" enable folding for vim files
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
 
 " set indent to 4 spaces
 set tabstop=4
@@ -66,30 +131,16 @@ set backspace=2
 set hlsearch
 set incsearch
 
-" ctrl-k to clear search highlighting
-noremap <C-\> :nohl<CR>
-
 " try auto-indenting
 set cindent
 set autoindent
 
-" no back files
-set nobackup
-set nowritebackup
-set noswapfile
+" }}}
 
-" status line
-set laststatus=2
-set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" Key Mappings {{{
 
-" show filename for windows
-set cursorline
-hi CursorLine cterm=NONE ctermbg=blue ctermfg=white
-autocmd WinEnter * setlocal cursorline
-autocmd WinLeave * setlocal nocursorline
+" ctrl-k to clear search highlighting
+nnoremap <C-\> :nohl<CR>
 
 " rename word under cursor
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
@@ -98,45 +149,38 @@ nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 " pass while file to slime
 :map <C-c>a ggvG<C-c><C-c>
 
-" ctrlp
-" disable jump to buffer
-let g:ctrlp_jump_to_buffer = 0
+" easy split navigation
+nnoremap <C-h>  <C-w>h
+nnoremap <C-j>  <C-w>j
+nnoremap <C-k>  <C-w>k
+nnoremap <C-l>  <C-w>l
 
-" custom filetype ignores
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|build$\|classes$\|node_modules$\|vendor$\|\.lein.*$',
-  \ 'file': '\.swf$\|\.flv$\|\.gif$\|\.png$\|\.jpg$\|\.exe$\|\.so$\|\.dll$\|\.swp$\|\.DS_Store$\|\.jar$',
-  \ 'link': 'bad_symbolic_link',
-  \ }
+" close all splits but current
+nnoremap <C-u> :only<CR>
 
-" keep project directory as working dir
-let g:ctrlp_working_path_mode = 0
+" In normal mode, space to center on current line
+nnoremap <space> zz
 
-" use filename matching by default
-let g:ctrlp_by_filename = 1
+" use H and L for moving sexps up/down in paredit
+nnoremap <S-h> ,<
+nnoremap <S-l> ,>
 
-" clear ctrlp cache
-:noremap :ccc :ClearAllCtrlPCaches<CR>
+" disable arrow keys
+noremap <Up> <nop>
+noremap <Down> <nop>
+noremap <Left> <nop>
+noremap <Right> <nop>
 
-" YankRing
-let g:yankring_replace_n_pkey = '<C-Y>'
-:map :yr :YRShow<CR>
-
-" always use paste mode
-set paste
+" Reselect visual block after indent/outdent
+vnoremap < <gv
+vnoremap > >gv
 
 " shortcut to close all buffers
-:noremap :bda :bufdo bdelete<CR>
+nnoremap :bda :bufdo bdelete<CR>
 
-" symfony shortcuts from Resources
-:noremap :sbe :e ../Entity<CR>
-:noremap :sbc :e ../Controller<CR>
+" }}}
 
-" svn blame on file
-:noremap :sb ggdG:r!svn blame %<CR>
-
-" disable phpcs
-let g:syntastic_phpcs_disable = 1
+" File Types {{{
 
 " syntax highlighting for clojurescript
 au BufRead,BufNewFile *.cljs set filetype=clojure
@@ -145,30 +189,6 @@ au BufRead,BufNewFile *.cljp set syntax=clojure
 
 " syntax highlighting for xcss
 au BufRead,BufNewFile *.xcss set syntax=scss
-
-" shortcut to change tabs
-:noremap <C-h> :tabp<CR>
-:noremap <C-l> :tabn<CR>
-
-" shortcut to run coding standards
-:noremap :cs :!phpcs --standard=BoxUK %<CR>
-
-" set colorscheme
-set background=dark
-"colorscheme solarized
-"colorscheme molokai
-colorscheme vanzan_color
-
-" enable copy-on-select in macvim
-set go+=a
-
-" set macvim font
-set gfn=Monaco:h12
-
-" disable macvim toolbar
-if has("gui_running")
-    set guioptions=egmrt
-endif
 
 " set 2 space indent for scss files
 autocmd Filetype scss setlocal ts=2 sts=2 sw=2
@@ -186,29 +206,11 @@ autocmd Filetype clojure setlocal ts=2 sts=2 sw=2
 " 2 space indent for haskell
 autocmd Filetype haskell setlocal ts=2 sts=2 sw=2
 
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%121v.\+/
+" strip trailing whitespace
+autocmd BufWritePre *.php :%s/\s\+$//e
+autocmd BufWritePre *.clj :%s/\s\+$//e
+autocmd BufWritePre *.js :%s/\s\+$//e
+autocmd BufWritePre *.css :%s/\s\+$//e
 
-" reload vimrc when edited
-autocmd! BufWritePost vimrc source ~/.vimrc
-
-" easy split navigation
-noremap <C-h>  <C-w>h
-noremap <C-j>  <C-w>j
-noremap <C-k>  <C-w>k
-noremap <C-l>  <C-w>l
-
-" Reselect visual block after indent/outdent
-vnoremap < <gv
-vnoremap > >gv
-
-" close all splits but current
-nmap <C-u> :only<CR>
-
-" In normal mode, space to center on current line
-nmap <space> zz
-
-" use H and L for moving sexps up/down in paredit
-nmap <S-h> ,<
-nmap <S-l> ,>
+" }}}
 
