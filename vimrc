@@ -1,4 +1,3 @@
-
 " Plugins {{{
 
 " syntastic
@@ -39,9 +38,6 @@ let g:ctrlp_working_path_mode = 0
 " use filename matching by default
 let g:ctrlp_by_filename = 1
 
-" clear ctrlp cache
-nnoremap :ccc :ClearAllCtrlPCaches<CR>
-
 " disable phpcs
 let g:syntastic_phpcs_disable = 1
 
@@ -78,6 +74,11 @@ hi CursorLine cterm=NONE ctermbg=blue ctermfg=white
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 
+" no back files
+set nobackup
+set nowritebackup
+set noswapfile
+
 " }}}
 
 " Visual {{{
@@ -93,11 +94,6 @@ set gfn=Monaco:h12
 if has("gui_running")
     set guioptions=egmrt
 endif
-
-" no back files
-set nobackup
-set nowritebackup
-set noswapfile
 
 " }}}
 
@@ -139,7 +135,7 @@ set autoindent
 
 " Key Mappings {{{
 
-" ctrl-k to clear search highlighting
+" clear search highlighting
 nnoremap <C-\> :nohl<CR>
 
 " rename word under cursor
@@ -177,6 +173,9 @@ vnoremap > >gv
 
 " shortcut to close all buffers
 nnoremap :bda :bufdo bdelete<CR>
+
+" clear ctrlp cache
+nnoremap :ccc :ClearAllCtrlPCaches<CR>
 
 " }}}
 
