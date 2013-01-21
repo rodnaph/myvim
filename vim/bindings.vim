@@ -1,12 +1,14 @@
 
+" disable man-page shortcut
+nnoremap <S-k> <nop>
+
 " clear search highlighting
 nnoremap <C-\> :nohl<CR>
 
 " rename word under cursor
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
-" slime
-" pass while file to slime
+" pass whole file to slime
 :map <C-c>a ggvG<C-c><C-c>
 
 " easy split navigation
@@ -18,7 +20,7 @@ nnoremap <C-l>  <C-w>l
 " close all splits but current
 nnoremap <C-u> :only<CR>
 
-" In normal mode, space to center on current line
+" space to center on current line
 nnoremap <space> zz
 
 " use H and L for moving sexps up/down in paredit
