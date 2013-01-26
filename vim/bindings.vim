@@ -8,9 +8,6 @@ nnoremap <C-\> :nohl<CR>
 " rename word under cursor
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
-" pass whole file to slime
-:map <C-c>a ggvG<C-c><C-c>
-
 " easy split navigation
 nnoremap <C-h>  <C-w>h
 nnoremap <C-j>  <C-w>j
