@@ -31,3 +31,6 @@ set incsearch
 set cindent
 set autoindent
 
+" centre cursor when searching
+set scrolloff=999
+
