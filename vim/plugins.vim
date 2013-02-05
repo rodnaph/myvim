@@ -21,6 +21,12 @@ Bundle 'vim-scripts/paredit.vim'
 Bundle 'jpalardy/vim-slime'
 Bundle 'vim-scripts/VimClojure'
 
+" Enable YCM if it's been built
+let ycmFile = expand("~/.vim/bundle/YouCompleteMe/python/libclang.so")
+if filereadable(ycmFile)
+    Bundle 'Valloric/YouCompleteMe'
+endif
+
 " disable jump to buffer
 let g:ctrlp_jump_to_buffer = 0
 
