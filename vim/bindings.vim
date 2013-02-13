@@ -40,3 +40,6 @@ nnoremap :bda :bufdo bdelete<CR>
 " clear ctrlp cache
 nnoremap :ccc :ClearAllCtrlPCaches<CR>
 
+" show YankRing
+nnoremap :yr :YRShow<CR>
+

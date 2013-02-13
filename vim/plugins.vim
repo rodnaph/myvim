@@ -18,7 +18,7 @@ Bundle 'rodnaph/vim-color-schemes'
 Bundle 'vim-scripts/paredit.vim'
 Bundle 'jpalardy/vim-slime'
 Bundle 'vim-scripts/VimClojure'
-Bundle 'Valloric/YouCompleteMe'
+Bundle 'vim-scripts/YankRing.vim'
 
 " Enable YCM if it's been built
 if has("gui_macvim")
