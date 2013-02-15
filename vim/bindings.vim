@@ -43,3 +43,6 @@ nnoremap :ccc :ClearAllCtrlPCaches<CR>
 " show YankRing
 nnoremap :yr :YRShow<CR>
 
+" Sudo write
+cmap w!! w !sudo tee % > /dev/null <CR>
+

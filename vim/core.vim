@@ -15,6 +15,13 @@ set paste
 " enable copy-on-select in macvim
 set go+=a
 
+" enable persistent undo
+set udf
+set undodir=~/.vim/vimundo
+
+" no error bell
+set noeb vb t_vb=
+
 " status line
 set laststatus=2
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
