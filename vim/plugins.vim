@@ -47,3 +47,6 @@ let g:ctrlp_by_filename = 1
 " disable phpcs
 let g:syntastic_phpcs_disable = 1
 
+" twig highlighting plugin
+au BufRead,BufNewFile *.twig set filetype=htmljinja
+
