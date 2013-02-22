@@ -19,6 +19,7 @@ Bundle 'vim-scripts/paredit.vim'
 Bundle 'jpalardy/vim-slime'
 Bundle 'vim-scripts/VimClojure'
 Bundle 'vim-scripts/YankRing.vim'
+Bundle 'rodnaph/jinja.vim'
 
 " Enable YCM if it's been built
 if has("gui_macvim")
