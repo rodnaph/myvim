@@ -5,6 +5,10 @@ let g:syntastic_auto_jump=1
 let g:syntastic_auto_loc_list=1
 let g:loaded_html_syntax_checker=1 " disables html checker
 
+" yankring
+let g:yankring_history_dir = '$VIM'
+let g:yankring_replace_n_pkey = '<noop>'
+
 " init Vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
