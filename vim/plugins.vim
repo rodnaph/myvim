@@ -35,12 +35,9 @@ Bundle 'vim-scripts/YankRing.vim'
 Bundle 'rodnaph/jinja.vim'
 Bundle 'Lokaltog/vim-powerline'
 
-" Enable YCM if it's been built
+" Enable YCM for MacVim
 if has("gui_macvim")
-    let ycmFile = expand("~/.vim/bundle/YouCompleteMe/python/libclang.so")
-    if filereadable(ycmFile)
-        Bundle 'Valloric/YouCompleteMe'
-    endif
+    Bundle 'Valloric/YouCompleteMe'
 endif
 
 " disable jump to buffer
