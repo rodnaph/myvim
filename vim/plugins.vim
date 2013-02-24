@@ -1,12 +1,20 @@
 
-" syntastic
+" enable sings for syntastic
 let g:syntastic_enable_signs=1
+
+" auto-jump to errors
 let g:syntastic_auto_jump=1
+
+" add errors to location list
 let g:syntastic_auto_loc_list=1
+
+" disable html checking (makes crazy)
 let g:loaded_html_syntax_checker=1 " disables html checker
 
-" yankring
+" keep yankring history in vim folder
 let g:yankring_history_dir = '$HOME/.vim/yankring/'
+
+" disable <C-p> for yankring (leave to ctrlp)
 let g:yankring_replace_n_pkey = '<noop>'
 
 " init Vundle
