@@ -46,7 +46,3 @@ nnoremap :yr :YRShow<CR>
 " Sudo write
 cmap w!! w !sudo tee % > /dev/null <CR>
 
-" next/prev git hunk
-nnoremap + :GitGutterNextHunk<CR>
-nnoremap _ :GitGutterPrevHunk<CR>
-

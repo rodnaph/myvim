@@ -34,7 +34,6 @@ Bundle 'vim-scripts/VimClojure'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'rodnaph/jinja.vim'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'airblade/vim-gitgutter'
 
 " Enable YCM for MacVim
 if has("gui_macvim")
