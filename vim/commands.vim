@@ -8,23 +8,19 @@ augroup standard
     autocmd BufRead,BufNewFile *.cljs set syntax=clojure
     autocmd BufRead,BufNewFile *.cljp set syntax=clojure
 
-    " syntax highlighting for xcss
+    " use scss for syntax highlighting xcss
     autocmd BufRead,BufNewFile *.xcss set syntax=scss
 
-    " set 2 space indent for scss files
-    autocmd Filetype scss setlocal ts=2 sts=2 sw=2
-
-    " set a filetype for racket files
+    " racket files
     autocmd BufRead,BufNewFile *.rkt set filetype=racket
 
-    " syntax highlighting for racket files
+    " use scheme syntax highlighting for racket files
     autocmd BufRead,BufNewFile *.rkt set syntax=scheme
 
-    " 2 space indentation for racket files
+    " 2 space indentation 
+    autocmd Filetype scss setlocal ts=2 sts=2 sw=2
     autocmd Filetype racket setlocal ts=2 sts=2 sw=2
     autocmd Filetype clojure setlocal ts=2 sts=2 sw=2
-
-    " 2 space indent for haskell
     autocmd Filetype haskell setlocal ts=2 sts=2 sw=2
     autocmd Filetype coffee setlocal ts=2 sts=2 sw=2
 
