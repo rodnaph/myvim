@@ -26,6 +26,7 @@ augroup standard
 
     " 2 space indent for haskell
     autocmd Filetype haskell setlocal ts=2 sts=2 sw=2
+    autocmd Filetype coffee setlocal ts=2 sts=2 sw=2
 
     " strip trailing whitespace
     autocmd BufWritePre *.php :%s/\s\+$//e
@@ -33,6 +34,7 @@ augroup standard
     autocmd BufWritePre *.js :%s/\s\+$//e
     autocmd BufWritePre *.css :%s/\s\+$//e
     autocmd BufWritePre *.twig :%s/\s\+$//e
+    autocmd BufWritePre *.coffee :%s/\s\+$//e
 
 augroup END
 
