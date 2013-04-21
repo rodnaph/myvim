@@ -30,7 +30,7 @@ ln -s `pwd`/vim $HOME/.vim
 
 echo "Symlinks created, installing vundles..."
 
-vim +BundleInstall +qall -e -s
+vim +BundleInstall +qall
 
 echo "Complete!"
 
