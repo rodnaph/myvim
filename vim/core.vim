@@ -16,8 +16,10 @@ set paste
 set go+=a
 
 " enable persistent undo
-set udf
-set undodir=~/.vim/vimundo
+if has("gui_running")
+    set udf
+    set undodir=~/.vim/vimundo
+endif
 
 " no error bell
 set noeb vb t_vb=
