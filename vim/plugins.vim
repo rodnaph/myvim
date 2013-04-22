@@ -1,8 +1,4 @@
 
-" init Vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
 " enable sings for syntastic
 let g:syntastic_enable_signs=1
 
@@ -20,6 +16,10 @@ let g:yankring_history_dir = '$HOME/.vim/yankring/'
 
 " disable <C-p> for yankring (leave to ctrlp)
 let g:yankring_replace_n_pkey = '<noop>'
+
+" init Vundle
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
 " Vundles (https://github.com/gmarik/vundle)
 Bundle 'gmarik/vundle'

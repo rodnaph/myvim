@@ -2,6 +2,7 @@
 
 VIM="$HOME/.vim"
 VIMRC="$HOME/.vimrc"
+VUNDLE="$VIM/bundle/vundle"
 
 function fatal() {
   echo "Error: $1"
@@ -28,7 +29,13 @@ fi
 ln -s `pwd`/vimrc $HOME/.vimrc
 ln -s `pwd`/vim $HOME/.vim
 
-echo "Symlinks created, installing vundles..."
+if [ ! "$(ls -A $VUNDLE)" ];
+then
+  git submodule init
+  git submodule update
+fi
+
+echo "Symlinks created, installing vundles (ignore Vim startup errors)..."
 
 vim +BundleInstall +qall
 
