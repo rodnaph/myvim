@@ -27,6 +27,7 @@ augroup standard
     " strip trailing whitespace
     autocmd BufWritePre *.php :%s/\s\+$//e
     autocmd BufWritePre *.clj :%s/\s\+$//e
+    autocmd BufWritePre *.cljs :%s/\s\+$//e
     autocmd BufWritePre *.js :%s/\s\+$//e
     autocmd BufWritePre *.css :%s/\s\+$//e
     autocmd BufWritePre *.twig :%s/\s\+$//e
