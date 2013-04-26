@@ -27,14 +27,18 @@ Bundle 'scrooloose/syntastic'
 Bundle 'kien/ctrlp.vim'
 Bundle 'vim-scripts/JavaScript-Indent'
 Bundle 'rodnaph/vim-color-schemes'
-Bundle 'vim-scripts/paredit.vim'
-Bundle 'jpalardy/vim-slime'
 Bundle 'danro/rename.vim'
-Bundle 'vim-scripts/VimClojure'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'rodnaph/jinja.vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'kchmck/vim-coffee-script'
+
+" Clojure
+Bundle 'vim-scripts/paredit.vim'
+Bundle 'tpope/vim-classpath'
+Bundle 'guns/vim-clojure-static'
+Bundle 'tpope/vim-fireplace'
+Bundle 'jpalardy/vim-slime'
 
 " Enable YCM for MacVim
 if has("gui_macvim")
