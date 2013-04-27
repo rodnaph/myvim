@@ -32,6 +32,7 @@ Bundle 'vim-scripts/YankRing.vim'
 Bundle 'rodnaph/jinja.vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'groenewege/vim-less'
 
 " Clojure
 Bundle 'vim-scripts/paredit.vim'
