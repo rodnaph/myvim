@@ -23,6 +23,7 @@ augroup standard
     autocmd Filetype clojure setlocal ts=2 sts=2 sw=2
     autocmd Filetype haskell setlocal ts=2 sts=2 sw=2
     autocmd Filetype coffee setlocal ts=2 sts=2 sw=2
+    autocmd Filetype less setlocal ts=2 sts=2 sw=2
 
     " strip trailing whitespace
     autocmd BufWritePre *.php :%s/\s\+$//e
