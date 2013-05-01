@@ -52,3 +52,6 @@ nnoremap <C-e> :Eval<CR>
 " Eval whole file
 nnoremap E :%Eval<CR>
 
+" W to paren wrap
+nnoremap W :normal,W<CR>
+
