@@ -21,25 +21,32 @@ let g:yankring_replace_n_pkey = '<noop>'
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" Vundles (https://github.com/gmarik/vundle)
+" Vundle
 Bundle 'gmarik/vundle'
-Bundle 'scrooloose/syntastic'
+
+" Utils
 Bundle 'kien/ctrlp.vim'
-Bundle 'vim-scripts/JavaScript-Indent'
-Bundle 'rodnaph/vim-color-schemes'
 Bundle 'danro/rename.vim'
 Bundle 'vim-scripts/YankRing.vim'
-Bundle 'rodnaph/jinja.vim'
 Bundle 'Lokaltog/vim-powerline'
+
+" Visual
+Bundle 'rodnaph/vim-color-schemes'
+
+" Syntax/Language
+Bundle 'scrooloose/syntastic'
+Bundle 'vim-scripts/JavaScript-Indent'
+Bundle 'rodnaph/jinja.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'groenewege/vim-less'
 
+" Slime
+Bundle 'jpalardy/vim-slime'
+
 " Clojure
 Bundle 'vim-scripts/paredit.vim'
-Bundle 'tpope/vim-classpath'
 Bundle 'guns/vim-clojure-static'
 Bundle 'tpope/vim-fireplace'
-Bundle 'jpalardy/vim-slime'
 
 " Enable YCM for MacVim
 if has("gui_macvim")

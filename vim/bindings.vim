@@ -46,3 +46,9 @@ nnoremap :yr :YRShow<CR>
 " Sudo write
 cmap w!! w !sudo tee % > /dev/null <CR>
 
+" Eval expression under cursor
+nnoremap <C-e> :Eval<CR>
+
+" Eval whole file
+nnoremap E :%Eval<CR>
+
