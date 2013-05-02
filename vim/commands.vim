@@ -11,10 +11,8 @@ augroup standard
     " use scss for syntax highlighting xcss
     autocmd BufRead,BufNewFile *.xcss set syntax=scss
 
-    " racket files
+    " racket files, use scheme syntax highlighting
     autocmd BufRead,BufNewFile *.rkt set filetype=racket
-
-    " use scheme syntax highlighting for racket files
     autocmd BufRead,BufNewFile *.rkt set syntax=scheme
 
     " 2 space indentation 
@@ -33,6 +31,9 @@ augroup standard
     autocmd BufWritePre *.css :%s/\s\+$//e
     autocmd BufWritePre *.twig :%s/\s\+$//e
     autocmd BufWritePre *.coffee :%s/\s\+$//e
+
+    " twig highlighting plugin
+    au BufRead,BufNewFile *.twig set filetype=htmljinja
 
 augroup END
 

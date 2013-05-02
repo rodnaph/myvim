@@ -40,9 +40,6 @@ Bundle 'rodnaph/jinja.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'groenewege/vim-less'
 
-" Slime
-Bundle 'jpalardy/vim-slime'
-
 " Clojure
 Bundle 'vim-scripts/paredit.vim'
 Bundle 'guns/vim-clojure-static'
@@ -71,7 +68,4 @@ let g:ctrlp_by_filename = 1
 
 " disable phpcs
 let g:syntastic_phpcs_disable = 1
-
-" twig highlighting plugin
-au BufRead,BufNewFile *.twig set filetype=htmljinja
 
