@@ -5,11 +5,14 @@ let g:syntastic_enable_signs=1
 " auto-jump to errors
 let g:syntastic_auto_jump=1
 
+" syntax check on-open
+let syntastic_check_on_open=1
+
+" disable HTML validation
+let syntastic_html_checkers=[]
+
 " add errors to location list
 let g:syntastic_auto_loc_list=1
-
-" disable html checking (makes crazy)
-let g:loaded_html_syntax_checker=1 " disables html checker
 
 " keep yankring history in vim folder
 let g:yankring_history_dir = '$HOME/.vim/yankring/'
