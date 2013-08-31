@@ -42,3 +42,6 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+" allow non-saved buffers to go to background
+set hidden
+
