@@ -17,9 +17,6 @@ nnoremap <C-l>  <C-w>l
 " close all splits but current
 nnoremap <C-u> :only<CR>
 
-" space to center on current line
-nnoremap <space> zz
-
 " use H and L for moving sexps up/down in paredit
 nnoremap <S-h> ,<
 nnoremap <S-l> ,>
