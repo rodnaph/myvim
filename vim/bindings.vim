@@ -59,7 +59,7 @@ inoremap <C-k> <C-Up>
 inoremap <C-j> <C-Down>
 
 " blank current line
-nnoremap <C-d> ddO<Esc>
+nnoremap <C-d> 0d$
 
 " toggle case of current word
 nnoremap Z viw~
