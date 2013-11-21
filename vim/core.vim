@@ -1,4 +1,7 @@
 
+" do not be Vi compatible
+set nocompatible
+
 syntax on
 
 filetype plugin indent on
