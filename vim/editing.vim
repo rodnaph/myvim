@@ -34,6 +34,3 @@ set autoindent
 " centre cursor when searching
 set scrolloff=999
 
-" drop a marker at the end of a change area (ie using 'cw')
-set cpoptions=Bces$
-
