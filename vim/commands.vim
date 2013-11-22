@@ -3,10 +3,9 @@ augroup standard
 
     autocmd!
 
-    " syntax highlighting for clojurescript
+    " clojurescript
     autocmd BufRead,BufNewFile *.cljs set filetype=clojure
     autocmd BufRead,BufNewFile *.cljs set syntax=clojure
-    autocmd BufRead,BufNewFile *.cljp set syntax=clojure
 
     " use scss for syntax highlighting xcss
     autocmd BufRead,BufNewFile *.xcss set syntax=scss
