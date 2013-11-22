@@ -47,3 +47,6 @@ set noswapfile
 " allow non-saved buffers to go to background
 set hidden
 
+" adjust preview window height
+set previewheight=20
+
