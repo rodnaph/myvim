@@ -50,3 +50,9 @@ set hidden
 " adjust preview window height
 set previewheight=20
 
+" new splits go to the bottom
+set splitbelow
+
+" new vsplits go to the right
+set splitright
+
