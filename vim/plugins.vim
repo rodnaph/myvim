@@ -31,10 +31,10 @@ Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
 Bundle 'danro/rename.vim'
 Bundle 'vim-scripts/YankRing.vim'
-Bundle 'Lokaltog/vim-powerline'
 
 " Visual
 Bundle 'rodnaph/vim-color-schemes'
+Bundle 'Lokaltog/vim-powerline'
 
 " Syntax/Language
 Bundle 'scrooloose/syntastic'
