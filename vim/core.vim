@@ -34,7 +34,8 @@ set laststatus=2
 
 " show filename for windows
 set cursorline
-hi CursorLine cterm=NONE ctermbg=blue ctermfg=white
+
+" only show cursorline for current window
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 
