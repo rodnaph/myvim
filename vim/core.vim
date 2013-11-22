@@ -29,12 +29,8 @@ endif
 " no error bell
 set noeb vb t_vb=
 
-" status line
+" last window always has status line
 set laststatus=2
-set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
 
 " show filename for windows
 set cursorline
