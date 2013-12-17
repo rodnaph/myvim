@@ -31,6 +31,7 @@ augroup standard
     autocmd BufWritePre *.css :%s/\s\+$//e
     autocmd BufWritePre *.twig :%s/\s\+$//e
     autocmd BufWritePre *.coffee :%s/\s\+$//e
+    autocmd BufWritePre *.py :%s/\s\+$//e
 
     " twig highlighting plugin
     au BufRead,BufNewFile *.twig set filetype=htmljinja
