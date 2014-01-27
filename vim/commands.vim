@@ -3,6 +3,9 @@ augroup standard
 
     autocmd!
 
+    " markdown
+    autocmd BufRead,BufNewFile *.md set filetype=Markdown
+
     " clojurescript
     autocmd BufRead,BufNewFile *.cljs set filetype=clojure
     autocmd BufRead,BufNewFile *.cljs set syntax=clojure
@@ -35,6 +38,9 @@ augroup standard
 
     " twig highlighting plugin
     au BufRead,BufNewFile *.twig set filetype=htmljinja
+
+    " Wrap at 80 chars for markdown files
+    au Filetype Markdown setlocal wrap textwidth=80
 
 augroup END
 
