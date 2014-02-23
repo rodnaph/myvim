@@ -2,9 +2,6 @@
 " do not be Vi compatible
 set nocompatible
 
-" try to use syntax highlighting
-syntax on
-
 " turn filetype options on
 filetype plugin indent on
 
