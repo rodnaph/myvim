@@ -14,9 +14,6 @@ set ff=unix
 " always use paste mode
 set paste
 
-" enable copy-on-select in macvim
-set go+=a
-
 " enable persistent undo
 if has("gui_running")
     set udf
