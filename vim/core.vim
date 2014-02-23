@@ -32,10 +32,6 @@ set laststatus=2
 " show filename for windows
 set cursorline
 
-" only show cursorline for current window
-autocmd WinEnter * setlocal cursorline
-autocmd WinLeave * setlocal nocursorline
-
 " no back files
 set nobackup
 set nowritebackup

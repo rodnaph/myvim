@@ -3,6 +3,10 @@ augroup standard
 
     autocmd!
 
+    " only show cursorline for current window
+    autocmd WinEnter * setlocal cursorline
+    autocmd WinLeave * setlocal nocursorline
+
     " markdown
     autocmd BufRead,BufNewFile *.md set filetype=Markdown
 
