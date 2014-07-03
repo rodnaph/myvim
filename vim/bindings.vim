@@ -52,12 +52,6 @@ nnoremap E :%Eval<CR>
 " W to paren wrap
 nnoremap W :normal,W<CR>
 
-" move while in insert mode
-inoremap <C-h> <C-Left>
-inoremap <C-l> <C-Right>
-inoremap <C-k> <C-Up>
-inoremap <C-j> <C-Down>
-
 " blank current line
 nnoremap <C-d> 0d$
 
