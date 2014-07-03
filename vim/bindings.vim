@@ -58,3 +58,6 @@ nnoremap <C-d> 0d$
 " toggle case of current word
 nnoremap Z viw~
 
+" disable backspace
+inoremap <BS> <Nop>
+
