@@ -1,4 +1,7 @@
 
+" disable Ex mode
+nnoremap Q <nop>
+
 " disable man-page shortcut
 nnoremap <S-k> <nop>
 
