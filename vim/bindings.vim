@@ -68,3 +68,6 @@ inoremap <BS> <Nop>
 inoremap <C-space> <CR>
 inoremap <CR> <Nop>
 
+" Start commands with ctrl-c
+nnoremap <C-c> :
+
