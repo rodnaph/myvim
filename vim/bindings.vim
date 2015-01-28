@@ -64,3 +64,7 @@ nnoremap Z viw~
 " disable backspace
 inoremap <BS> <Nop>
 
+" Newlines in insert mode
+inoremap <C-space> <CR>
+inoremap <CR> <Nop>
+
