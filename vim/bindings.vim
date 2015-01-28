@@ -71,3 +71,7 @@ inoremap <CR> <Nop>
 " Start commands with ctrl-c
 nnoremap <C-c> :
 
+" Save all buffers
+nnoremap <C-s> :wa<CR>
+inoremap <C-s> <ESC>:wa<CR>
+
