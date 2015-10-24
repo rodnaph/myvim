@@ -75,3 +75,7 @@ nnoremap <C-c> :
 nnoremap <C-s> :wa<CR>
 inoremap <C-s> <ESC>:wa<CR>
 
+" Scroll window left/right
+nnoremap <S-H> 2zh
+nnoremap <S-L> 2zl
+
