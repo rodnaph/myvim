@@ -63,9 +63,12 @@ nnoremap Z viw~
 
 " disable backspace
 inoremap <BS> <Nop>
+cnoremap <BS> <Nop>
+nnoremap <BS> <Nop>
 
-" Newlines in insert mode
+" Newlines in insert/command mode
 inoremap <C-space> <CR>
+cnoremap <C-space> <CR>
 inoremap <CR> <Nop>
 
 " Start commands with ctrl-c
