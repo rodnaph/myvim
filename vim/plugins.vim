@@ -23,6 +23,17 @@ let g:yankring_history_dir = '$HOME/.vim/yankring/'
 " disable <C-p> for yankring (leave to ctrlp)
 let g:yankring_replace_n_pkey = '<noop>'
 
+if !exists('g:vdebug_options')
+    let g:vdebug_options = {}
+endif
+
+let g:vdebug_options["break_on_open"] = 0
+let g:vdebug_options["path_maps"] = {
+\    "/opt/scotam/bindhq-webapp": "/Users/rod/Code/scotam/bindhq-webapp"
+\}
+
+let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
+
 " init Vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -34,6 +45,7 @@ Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
 Bundle 'danro/rename.vim'
 Bundle 'vim-scripts/YankRing.vim'
+Bundle 'joonty/vdebug'
 
 " Visual
 Bundle 'rodnaph/vim-color-schemes'
