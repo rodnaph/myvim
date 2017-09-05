@@ -1,4 +1,7 @@
 
+" disable SQLComplete
+let g:loaded_sql_completion=1
+
 " enable sings for syntastic
 let g:syntastic_enable_signs=1
 
