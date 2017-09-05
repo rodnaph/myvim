@@ -10,9 +10,19 @@ augroup standard
     " markdown
     autocmd BufRead,BufNewFile *.md set filetype=Markdown
 
+    " scala
+    autocmd BufRead,BufNewFile *.scala set filetype=scala
+
+    " terraform
+    autocmd BufRead,BufNewFile *.tf set filetype=hcl
+
     " clojurescript
     autocmd BufRead,BufNewFile *.cljs set filetype=clojure
     autocmd BufRead,BufNewFile *.cljs set syntax=clojure
+
+    " edn
+    autocmd BufRead,BufNewFile *.edn set filetype=clojure
+    autocmd BufRead,BufNewFile *.edn set syntax=clojure
 
     " use scss for syntax highlighting xcss
     autocmd BufRead,BufNewFile *.xcss set syntax=scss
@@ -20,6 +30,10 @@ augroup standard
     " racket files, use scheme syntax highlighting
     autocmd BufRead,BufNewFile *.rkt set filetype=racket
     autocmd BufRead,BufNewFile *.rkt set syntax=scheme
+
+    " JSX
+    autocmd BufRead,BufNewFile *.jsx set filetype=JSX
+    autocmd BufRead,BufNewFile *.jsx set syntax=javascript
 
     " 2 space indentation 
     autocmd Filetype scss setlocal ts=2 sts=2 sw=2
@@ -29,6 +43,8 @@ augroup standard
     autocmd Filetype coffee setlocal ts=2 sts=2 sw=2
     autocmd Filetype less setlocal ts=2 sts=2 sw=2
     autocmd Filetype vim setlocal ts=2 sts=2 sw=2
+    autocmd Filetype JSX setlocal ts=2 sts=2 sw=2
+    autocmd Filetype hcl setlocal ts=2 sts=2 sw=2
 
     " strip trailing whitespace
     autocmd BufWritePre *.php :%s/\s\+$//e
@@ -40,6 +56,9 @@ augroup standard
     autocmd BufWritePre *.coffee :%s/\s\+$//e
     autocmd BufWritePre *.py :%s/\s\+$//e
     autocmd BufWritePre *.sql :%s/\s\+$//e
+    autocmd BufWritePre *.jsx :%s/\s\+$//e
+    autocmd BufWritePre *.scala :%s/\s\+$//e
+    autocmd BufWritePre *.sbt :%s/\s\+$//e
 
     " twig highlighting plugin
     au BufRead,BufNewFile *.twig set filetype=htmljinja
