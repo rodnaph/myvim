@@ -14,8 +14,9 @@ set t_Co=256
 " ensure unix line endings
 set ff=unix
 
-" always use paste mode
-set paste
+"" always use paste mode
+"set paste
+" disabled as it somehow sets expandtab to be off
 
 " enable persistent undo
 if has("gui_running")
