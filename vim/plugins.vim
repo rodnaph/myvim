@@ -46,22 +46,24 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'danro/rename.vim'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'joonty/vdebug'
+Bundle 'tpope/vim-vinegar'
 
 " Visual
 Bundle 'rodnaph/vim-color-schemes'
 Bundle 'Lokaltog/vim-powerline'
+Bundle '2072/vim-syntax-for-PHP.git'
 
 " Syntax/Language
 Bundle 'scrooloose/syntastic'
 Bundle 'vim-scripts/JavaScript-Indent'
 Bundle 'rodnaph/jinja.vim'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'groenewege/vim-less'
+Bundle 'mattn/emmet-vim'
 
 " Clojure
 Bundle 'vim-scripts/paredit.vim'
 Bundle 'guns/vim-clojure-static'
 Bundle 'tpope/vim-fireplace'
+Bundle 'venantius/vim-cljfmt'
 
 " Enable YCM for MacVim
 if has("gui_macvim")
