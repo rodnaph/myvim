@@ -2,6 +2,9 @@
 " do not be Vi compatible
 set nocompatible
 
+" re-read changed files automatically
+set autoread
+
 " turn filetype options on
 filetype plugin indent on
 
