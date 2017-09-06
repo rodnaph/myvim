@@ -35,7 +35,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 " shortcut to close all buffers
-command! BD bufdo bdelete
+command! BD :%bd
 
 " clear ctrlp cache
 nnoremap :ccc :ClearAllCtrlPCaches<CR>
