@@ -28,9 +28,6 @@ if !exists('g:vdebug_options')
 endif
 
 let g:vdebug_options["break_on_open"] = 0
-let g:vdebug_options["path_maps"] = {
-\    "/opt/scotam/bindhq-webapp": "/Users/rod/Code/scotam/bindhq-webapp"
-\}
 
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 
