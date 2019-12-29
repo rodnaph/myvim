@@ -60,6 +60,9 @@ augroup standard
     autocmd BufWritePre *.jsx :%s/\s\+$//e
     autocmd BufWritePre *.scala :%s/\s\+$//e
     autocmd BufWritePre *.sbt :%s/\s\+$//e
+    autocmd BufWritePre *.tf :%s/\s\+$//e
+    autocmd BufWritePre *.tfvars :%s/\s\+$//e
+    autocmd BufWritePre *.yml :%s/\s\+$//e
 
     " twig highlighting plugin
     au BufRead,BufNewFile *.twig set filetype=htmljinja
