@@ -87,3 +87,21 @@ nnoremap <S-L> 2zl
 " C-r replace selection
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
+" Include use statement
+nmap <Leader>u :call phpactor#UseAdd()<CR>
+
+" Include hover statement
+nmap <Leader>h :call phpactor#Hover()<CR>
+
+" Invoke the context menu
+nmap <Leader>mm :call phpactor#ContextMenu()<CR>
+
+" Goto definition of class or class member under the cursor
+nmap <Leader>o :call phpactor#GotoDefinition()<CR>
+
+" Transform the classes in the current file
+nmap <Leader>tt :call phpactor#Transform()<CR>
+
+" Open navigation menu
+nmap <Leader>nn :call phpactor#Navigate()<CR>
+
