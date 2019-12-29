@@ -37,6 +37,8 @@ vnoremap > >gv
 " shortcut to close all buffers
 command! BD :%bd
 
+command! UUID :r !uuidgen | tr "[:upper:]" "[:lower:]"
+
 " clear ctrlp cache
 nnoremap :ccc :ClearAllCtrlPCaches<CR>
 
