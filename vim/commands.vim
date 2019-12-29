@@ -45,6 +45,7 @@ augroup standard
     autocmd Filetype vim setlocal ts=2 sts=2 sw=2
     autocmd Filetype JSX setlocal ts=2 sts=2 sw=2
     autocmd Filetype hcl setlocal ts=2 sts=2 sw=2
+    autocmd Filetype yaml setlocal ts=2 sts=2 sw=2
 
     " strip trailing whitespace
     autocmd BufWritePre *.php :%s/\s\+$//e
