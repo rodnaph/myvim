@@ -7,14 +7,14 @@ augroup standard
     autocmd WinEnter * setlocal cursorline
     autocmd WinLeave * setlocal nocursorline
 
+    " terraform
+    autocmd BufRead,BufNewFile *.tfvars set filetype=terraform
+
     " markdown
     autocmd BufRead,BufNewFile *.md set filetype=Markdown
 
     " scala
     autocmd BufRead,BufNewFile *.scala set filetype=scala
-
-    " terraform
-    autocmd BufRead,BufNewFile *.tf set filetype=hcl
 
     " clojurescript
     autocmd BufRead,BufNewFile *.cljs set filetype=clojure
