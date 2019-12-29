@@ -105,3 +105,5 @@ nmap <Leader>tt :call phpactor#Transform()<CR>
 " Open navigation menu
 nmap <Leader>nn :call phpactor#Navigate()<CR>
 
+" Format JSON
+nnoremap :json :%!python -m json.tool
