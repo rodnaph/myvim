@@ -84,3 +84,6 @@ inoremap <C-s> <ESC>:wa<CR>
 nnoremap <S-H> 2zh
 nnoremap <S-L> 2zl
 
+" C-r replace selection
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+
