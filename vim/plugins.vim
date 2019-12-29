@@ -44,6 +44,11 @@ Bundle 'danro/rename.vim'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'joonty/vdebug'
 Bundle 'tpope/vim-vinegar'
+Bundle 'tpope/vim-abolish'
+Bundle 'tpope/vim-dispatch'
+
+" Git
+Bundle 'tpope/vim-fugitive'
 
 " Visual
 Bundle 'rodnaph/vim-color-schemes'
@@ -55,6 +60,11 @@ Bundle 'scrooloose/syntastic'
 Bundle 'vim-scripts/JavaScript-Indent'
 Bundle 'rodnaph/jinja.vim'
 Bundle 'mattn/emmet-vim'
+Bundle 'hashivim/vim-terraform'
+Bundle 'chr4/nginx.vim'
+
+" PHP
+Bundle 'phpactor/phpactor'
 
 " Clojure
 Bundle 'vim-scripts/paredit.vim'
