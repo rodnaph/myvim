@@ -107,3 +107,12 @@ nmap <Leader>nn :call phpactor#Navigate()<CR>
 
 " Format JSON
 nnoremap :json :%!python -m json.tool
+
+" C-t for run test
+nnoremap <C-t> :Dispatch phpunit %<CR>
+
+" Run psalm for current file
+command! Psalm :Dispatch vendor/bin/psalm --config=psalm.xml %
+
+" Run phpstan for current file
+command! Stan :Dispatch vendor/bin/phpstan analyse -c phpstan.neon %
