@@ -82,7 +82,7 @@ let g:ctrlp_jump_to_buffer = 0
 
 " custom filetype ignores
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '_site$\|\.git$\|\.hg$\|\.svn$\|build$\|classes$\|target$\|node_modules$\|vendor$\|\.lein.*$\|out$',
+  \ 'dir':  'public\/bundles$\|var$\|_site$\|\.git$\|\.hg$\|\.svn$\|build$\|classes$\|target$\|node_modules$\|vendor$\|\.lein.*$\|out$\|cordova/platforms$\|cordova/plugins$',
   \ 'file': '\.swf$\|\.flv$\|\.gif$\|\.png$\|\.jpg$\|\.exe$\|\.so$\|\.dll$\|\.swp$\|\.DS_Store$\|\.jar$',
   \ 'link': 'bad_symbolic_link',
   \ }
