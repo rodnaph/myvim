@@ -1,3 +1,5 @@
+" enable uuid
+py import uuid
 
 " do not be Vi compatible
 set nocompatible
@@ -50,3 +52,8 @@ set splitbelow
 " new vsplits go to the right
 set splitright
 
+" netrw
+let g:netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
+
+" no newlines at end of file
+set nofixendofline

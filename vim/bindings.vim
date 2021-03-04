@@ -105,14 +105,23 @@ nmap <Leader>tt :call phpactor#Transform()<CR>
 " Open navigation menu
 nmap <Leader>nn :call phpactor#Navigate()<CR>
 
+" Import Missing Classes
+nnoremap :im :PhpactorImportMissingClasses<CR>
+
+" Extract Method
+vnoremap :em :PhpactorExtractMethod<CR>
+
 " Format JSON
 nnoremap :json :%!python -m json.tool
 
 " C-t for run test
-nnoremap <C-t> :Dispatch phpunit %<CR>
+nnoremap <C-t> :Dispatch rm -rf var/cache/test/twig; phpunit %<CR>
 
 " Run psalm for current file
-command! Psalm :Dispatch vendor/bin/psalm --config=psalm.xml %
+command! Psalm :Dispatch vendor/bin/psalm --config=psalm.xml -m --show-info=false %
 
 " Run phpstan for current file
-command! Stan :Dispatch vendor/bin/phpstan analyse -c phpstan.neon %
+command! Stan :Dispatch vendor/bin/phpstan --no-ansi analyse -c phpstan.neon %
+
+" Run CS for current file
+command! Cs :Dispatch vendor/bin/php-cs-fixer fix --diff --verbose --show-progress=estimating %

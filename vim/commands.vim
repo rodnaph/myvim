@@ -63,12 +63,16 @@ augroup standard
     autocmd BufWritePre *.tf :%s/\s\+$//e
     autocmd BufWritePre *.tfvars :%s/\s\+$//e
     autocmd BufWritePre *.yml :%s/\s\+$//e
+    autocmd BufWritePre *.yaml :%s/\s\+$//e
 
     " twig highlighting plugin
     au BufRead,BufNewFile *.twig set filetype=htmljinja
 
     " Wrap at 80 chars for markdown files
     au Filetype Markdown setlocal wrap textwidth=80
+
+    " Use PHPActor for PHP completion
+    autocmd FileType php setlocal omnifunc=phpactor#Complete
 
 augroup END
 
