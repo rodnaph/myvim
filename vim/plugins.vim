@@ -23,11 +23,13 @@ let g:yankring_history_dir = '$HOME/.vim/yankring/'
 " disable <C-p> for yankring (leave to ctrlp)
 let g:yankring_replace_n_pkey = '<noop>'
 
-if !exists('g:vdebug_options')
-    let g:vdebug_options = {}
-endif
-
-let g:vdebug_options["break_on_open"] = 0
+let g:vdebug_options = {
+\   'port' : 9003,
+\   'path_maps': {
+\       "/srv/app": "/Users/rod/Code/owsy/bindhq-webapp",
+\   },
+\   'layout': 'compact',
+\}
 
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 
@@ -41,28 +43,31 @@ call vundle#rc()
 " Vundle
 Bundle 'gmarik/vundle'
 
+" Editing
+Bundle 'easymotion/vim-easymotion'
+
 " Utils
-Bundle 'ctrlpvim/ctrlp.vim'
+Bundle 'junegunn/fzf'
+Bundle 'junegunn/fzf.vim'
 Bundle 'danro/rename.vim'
 Bundle 'vim-scripts/YankRing.vim'
-Bundle 'joonty/vdebug'
 Bundle 'tpope/vim-vinegar'
 Bundle 'tpope/vim-abolish'
 Bundle 'tpope/vim-dispatch'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'honza/vim-snippets'
+"Bundle 'ruanyl/vim-gh-line'
+
+if has("gui_macvim")
+  Bundle 'joonty/vdebug'
+endif
 
 " Git
 Bundle 'tpope/vim-fugitive'
 
-" Editorconfig
-Bundle 'editorconfig/editorconfig-vim'
-
 " Visual
-Bundle 'rodnaph/vim-color-schemes'
+"Bundle 'rodnaph/vim-color-schemes'
 Bundle 'Lokaltog/vim-powerline'
-"Bundle '2072/vim-syntax-for-PHP.git'
 Bundle 'StanAngeloff/php.vim'
+Bundle 'morhetz/gruvbox'
 
 " Syntax/Language
 Bundle 'scrooloose/syntastic'
@@ -77,15 +82,22 @@ Bundle 'alvan/vim-php-manual'
 Bundle 'phpactor/phpactor'
 
 " Clojure
-Bundle 'vim-scripts/paredit.vim'
-Bundle 'guns/vim-clojure-static'
+"Bundle 'vim-scripts/paredit.vim'
+"Bundle 'guns/vim-clojure-static'
+Bundle 'clojure-vim/clojure.vim'
 Bundle 'tpope/vim-fireplace'
 Bundle 'venantius/vim-cljfmt'
 
 " Enable YCM for MacVim
 if has("gui_macvim")
-    "Bundle 'Valloric/YouCompleteMe'
+  Bundle 'ycm-core/YouCompleteMe'
+
+  let g:ycm_auto_trigger = 0
+  let g:ycm_key_invoke_completion = '<C-Enter>'
 endif
+
+" fzf
+let g:fzf_history_dir = '~/.config/fzf/fzf-history'
 
 " disable jump to buffer
 let g:ctrlp_jump_to_buffer = 0
@@ -110,3 +122,6 @@ let g:syntastic_phpcs_disable = 1
 
 " editorconfig compat with fugitive
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
+" Dispatch.vim
+let g:dispatch_quickfix_height=20

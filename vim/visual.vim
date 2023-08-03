@@ -1,7 +1,8 @@
 
 " set colorscheme
 set background=dark
-colorscheme vanzan_color
+"colorscheme vanzan_color
+colorscheme gruvbox
 
 " vanzan color adjustments
 hi Pmenu guifg=#f0f0f0 guibg=#706080

@@ -39,9 +39,6 @@ command! BD :%bd
 
 command! UUID :r !uuidgen | tr "[:upper:]" "[:lower:]"
 
-" clear ctrlp cache
-nnoremap :ccc :ClearAllCtrlPCaches<CR>
-
 " show YankRing
 nnoremap :yr :YRShow<CR>
 
@@ -71,7 +68,6 @@ nnoremap <BS> <Nop>
 " Newlines in insert/command mode
 inoremap <C-space> <CR>
 cnoremap <C-space> <CR>
-inoremap <CR> <Nop>
 
 " Start commands with ctrl-c
 nnoremap <C-c> :
@@ -124,4 +120,38 @@ command! Psalm :Dispatch vendor/bin/psalm --config=psalm.xml -m --show-info=fals
 command! Stan :Dispatch vendor/bin/phpstan --no-ansi analyse -c phpstan.neon %
 
 " Run CS for current file
-command! Cs :Dispatch vendor/bin/php-cs-fixer fix --diff --verbose --show-progress=estimating %
+command! Cs :Dispatch vendor/bin/php-cs-fixer fix --diff --verbose --show-progress=none %
+
+" Clear Symfony cache locally and in container
+command! Cc :Dispatch rm -rf var/cache && docker compose exec bindhq-fpm rm -rf var/cache
+
+" Split with Vim config
+command! Conf :sp ~/.config/vim/vim
+
+" YouCompleteMe
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+
+" Git mappings
+nnoremap <leader>gs :G<CR>
+nnoremap <leader>gh :diffget //3<CR>
+nnoremap <leader>gu :diffget //2<CR>
+
+" fzf mappings
+nnoremap <C-p> :GFiles --others --cached --exclude-standard<CR>
+nnoremap <C-i> :Lines<CR>
+
+" C-g to Ripgrep search word under cursor
+nnoremap <C-g> :execute 'Rg ' . expand('<cword>')<CR>
+
+" Resize splits with arrow keys
+nnoremap <Right> :vertical resize +1<CR>
+nnoremap <Left> :vertical resize -1<CR>
+nnoremap <Up> :resize +1<CR>
+nnoremap <Down> :resize -1<CR>
+
+" Paste and keep register
+xnoremap <Leader>p "_dP
+
+" Reformat file
+nnoremap <Leader>= ggvG=<C-o><C-o>

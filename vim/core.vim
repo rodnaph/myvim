@@ -1,5 +1,7 @@
 " enable uuid
-py import uuid
+"py import uuid
+
+let mapleader=" "
 
 " do not be Vi compatible
 set nocompatible
